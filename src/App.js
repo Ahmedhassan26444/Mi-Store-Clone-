@@ -8,7 +8,10 @@ import Heading from './components/Heading';
 import StarProduct from './components/StarProduct';
 import HotAccessoriesMenu from './components/HotAccessoriesMenu';
 import HotAccessories from './components/HotAccessories';
-
+import ProductReviews from "./components/ProductReviews";
+import Videos from "./components/Videos";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -72,6 +75,17 @@ function App() {
     }
   />
 </Routes>
+      <Heading text="Product Reviews"/>
+      
+        <ProductReviews productReviews={data.productReviews}/>
+         <Heading text="Videos"/>
+          <Videos videos={data.videos}/>
+          <Heading text="In The Press"/>
+          <Banner  banner={data.banner} />
+          <Footer footer={data.footer} />
+
+
+      
     </Router>
   );
 }
